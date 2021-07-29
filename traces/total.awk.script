@@ -1,0 +1,5 @@
+NR==1 { first = $NF }
+END {
+	last=$NF;
+	print last-first
+}

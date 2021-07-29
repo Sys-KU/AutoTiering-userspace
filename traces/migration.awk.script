@@ -1,0 +1,23 @@
+NR<=3 { n0 += $2 }
+NR==4 { n1 = $2 }
+NR==5 { n2 = $2 }
+NR==6 { n3 = $2 }
+{
+        node = NR % 6;
+        if (0 < node && node <= 3) {
+                node0 += $2;
+                if (node == 3) {
+                        print "Node0 "node0-n0;
+                        node0 = 0;
+                }
+        } else if (node == 4) {
+                node1 = $2;
+                print "Node1 "node1-n1;
+        } else if (node == 5) {
+                node2 = $2;
+                print "Node2 "node2-n2;
+        } else if (node == 0) {
+                node3 = $2;
+                print "Node3 "node3-n3;
+        }
+}

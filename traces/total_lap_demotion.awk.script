@@ -1,0 +1,23 @@
+NR==1 {
+	level0 = $2;
+	level1 = $3;
+	level2 = $4;
+	level3 = $5;
+	level4 = $6;
+	level5 = $7;
+	level6 = $8;
+	level7 = $9;
+	level8 = $10;
+}
+END {
+	last_level0 = $2;
+	last_level1 = $3;
+	last_level2 = $4;
+	last_level3 = $5;
+	last_level4 = $6;
+	last_level5 = $7;
+	last_level6 = $8;
+	last_level7 = $9;
+	last_level8 = $10;
+	print $1","last_level0-level0","last_level1-level1","last_level2-level2","last_level3-level3","last_level4-level4","last_level5-level5","last_level6-level6","last_level7-level7","last_level8-level8
+}

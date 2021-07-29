@@ -1,0 +1,5 @@
+NR==1 { base = $2 }
+{
+	stat = $2;
+	print stat-base;
+}

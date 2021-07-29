@@ -1,0 +1,11 @@
+BEGIN {
+	split(result_cols, arr, " ");
+}
+{
+	printf "%s",$1"-"$2;
+	for (val in arr) {
+		printf ",";
+		printf $arr[val];
+	}
+	printf "\n"
+}
